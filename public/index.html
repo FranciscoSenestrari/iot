@@ -8,7 +8,7 @@
             let d = await fetch("/api/getM");
             console.log(d);
             document.getElementById("num").innerText = await d.text();
-            if(d.value == 0)
+            if(d .text() == 0)
             {
                 document.getElementById("parm").innerText = "si";
 
