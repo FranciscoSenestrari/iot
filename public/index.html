@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        setInterval(async function () {
+            let d = await fetch("/api/getM");
+            console.log(d)
+            document.getElementById("num").innerText = await d.text();
+
+        },200);
+
+    </script>
 </head>
 <body>
 <h1>404 not found</h1>
+
+<h2 id="num"></h2>
+
+
+<div id="numero"></div>
 </body>
 </html>
