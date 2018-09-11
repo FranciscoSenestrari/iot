@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        setInterval(async function () {
+        let interval = setInterval(async function () {
             let d = await fetch("/api/getM");
             console.log(d);
             document.getElementById("num").innerText = await d.text();
+            if(d.value == 0)
+            {
+                document.getElementById("parm").innerText = "si";
+
+            }
+            else
+            {
+                document.getElementById("parm").innerText = "no";
+
+            }
+
 
         },200);
 
@@ -18,7 +29,8 @@
 
 <h2 id="num"></h2>
 
-
-<div id="numero"></div>
+<h2>tengo ganas de viciar</h2>
+<h2 id="parm"></h2>
+<div id="numero"></div>0
 </body>
 </html>
