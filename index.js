@@ -1,7 +1,8 @@
 const  express =  require('express') ;
 const app = express();
 
-app.get('/', function (req,res) {
+app.use(express.static("public"));
+app.get('/api/getUser', function (req,res) {
     res.send('hola');
 });
 
