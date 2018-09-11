@@ -6,7 +6,7 @@
     <script>
         setInterval(async function () {
             let d = await fetch("/api/getM");
-            console.log(d)
+            console.log(d);
             document.getElementById("num").innerText = await d.text();
 
         },200);
