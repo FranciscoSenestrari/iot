@@ -8,7 +8,7 @@
             let d = await fetch("/api/getM");
             console.log(d);
             document.getElementById("num").innerText = await d.text();
-            if(d .text() == 0)
+            if(d.text() == "#0")
             {
                 document.getElementById("parm").innerText = "si";
 
@@ -29,7 +29,6 @@
 
 <h2 id="num"></h2>
 
-<h2>tengo ganas de viciar</h2>
 <h2 id="parm"></h2>
 <div id="numero"></div>0
 </body>
