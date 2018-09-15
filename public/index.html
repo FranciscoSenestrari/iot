@@ -3,33 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <script>
+
         let interval = setInterval(async function () {
             let d = await fetch("/api/getM");
             console.log(d);
-            document.getElementById("num").innerText = await d.text();
-            if(d.text() == "#0")
-            {
-                document.getElementById("parm").innerText = "si";
 
+
+
+            if ( document.getElementById("num").innerText = await d.text()=="#0")
+            {
+                document.getElementById("color").style.color = await "#2E2EFE";
             }
             else
             {
-                document.getElementById("parm").innerText = "no";
+                document.getElementById("color").style.color = await "#fe0065";
+
 
             }
+            //
 
 
         },200);
-
     </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="/public/src/scripts/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/css/estilos.css">
+
 </head>
-<body>
-<h1>404 not found</h1>
+<body onload="f()">
+<div class="jumbotron">
+    <h1>Proyecto IOT </h1>
+</div>
+<div id="wrapper">
 
-<h2 id="num"></h2>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul id="sidebar" class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a id="cabeceraNav" href="#">
+                    Start Bootstrap
+                </a>
+            </li>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li>
+                <a href="#">Shortcuts</a>
+            </li>
+            <li>
+                <a href="#">Overview</a>
+            </li>
+            <li>
+                <a href="#">Events</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
-<h2 id="parm"></h2>
-<div id="numero"></div>0
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Estado</h1>
+                    <h2 id="num"></h2>
+                </div><h1 id="color">404 not found</h1>
+
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
 </body>
 </html>
